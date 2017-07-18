@@ -1,7 +1,6 @@
---create database db_randombeer;
---use db_randombeer;
+create database db_randombeer;
+use db_randombeer;
 
--- DROP TABLE review;
 DROP TABLE beer;
 DROP TABLE provider;
 
@@ -26,6 +25,7 @@ CREATE TABLE beer
    FOREIGN KEY(provider_name) REFERENCES provider(name)
 );
 
+-- DROP TABLE review;
 -- CREATE TABLE review
 -- (
 -- 	id					varchar(255) PRIMARY KEY,
@@ -33,11 +33,4 @@ CREATE TABLE beer
 -- 	review 				varchar(255) NOT NULL,
 -- 	beer_id				varchar(255),
 -- 	FOREIGN KEY(beer_id) REFERENCES beer(id)
--- );
--- CREATE TABLE beer_provider(
--- 	id 					varchar(255) PRIMARY KEY,
--- 	beer_id				varchar(255),
--- 	provider_id			varchar(255),
--- 	FOREIGN KEY(beer_id) REFERENCES beer(id),
--- 	FOREIGN KEY(provider_id) REFERENCES provider(name)
 -- );
